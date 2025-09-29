@@ -1,0 +1,50 @@
+.big-box {
+    position: relative;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: calc(100% - 1rem);
+    width: calc(100% - 1rem);
+    border: 2px solid black;
+}
+
+.arrow-down {
+    height: 1rem;
+    width: 1rem;
+    background-color: blue;
+    /* start from middle */
+    left: calc(50%);
+    /* make horizontally central */
+    position: absolute;
+}
+
+.arrow-right {
+    height: 1rem;
+    width: 1rem;
+    background-color: red;
+    position: absolute;
+    top: 50%; /* center vertically */
+    right: -0.5rem; /* half width outside */
+    transform: translateY(-50%); /* adjust to exact middle */
+}
+.arrow-fade-start {
+    height: 1rem;
+    width: 1rem;
+    background-color: green;
+    position: absolute;
+    top: 50%; /* center vertically */
+    right: -0.5rem; /* half width outside */
+    transform: translateY(-50%); /* adjust to exact middle */
+}
+.arrow-fade-end {
+    height: 1rem;
+    width: 1rem;
+    background-color: yellow;
+    position: absolute;
+    top: 50%; /* center vertically */
+    left: -0.5rem; /* half width outside */
+    transform: translateY(-50%);
+}
