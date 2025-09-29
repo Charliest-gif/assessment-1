@@ -1,50 +1,59 @@
+:root {
+    --arrow-size: 2rem;
+}
+
 .big-box {
     position: relative;
     height: 200px;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    padding: 0;
 }
 
 .box {
-    height: calc(100% - 1rem);
-    width: calc(100% - 1rem);
+    height: calc(100% - var(--arrow-size));
+    width: calc(100% - var(--arrow-size));
     border: 2px solid black;
 }
 
 .arrow-down {
-    height: 1rem;
-    width: 1rem;
+    height: var(--arrow-size);
+    width: var(--arrow-size);
     background-color: blue;
-    /* start from middle */
-    left: calc(50%);
-    /* make horizontally central */
     position: absolute;
+    bottom: calc(-0.5 * var(--arrow-size)); /* half outside */
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* center horizontally */
 }
 
 .arrow-right {
-    height: 1rem;
-    width: 1rem;
+    height: var(--arrow-size);
+    width: var(--arrow-size);
     background-color: red;
     position: absolute;
-    top: 50%; /* center vertically */
-    right: -0.5rem; /* half width outside */
-    transform: translateY(-50%); /* adjust to exact middle */
+    top: 50%;
+    right: calc(-0.5 * var(--arrow-size)); /* half outside */
+    transform: translateY(-50%);
 }
+
 .arrow-fade-start {
-    height: 1rem;
-    width: 1rem;
+    height: var(--arrow-size);
+    width: var(--arrow-size);
     background-color: green;
     position: absolute;
-    top: 50%; /* center vertically */
-    right: -0.5rem; /* half width outside */
-    transform: translateY(-50%); /* adjust to exact middle */
+    top: 50%;
+    right: calc(-0.5 * var(--arrow-size)); /* half outside */
+    transform: translateY(-50%);
 }
+
 .arrow-fade-end {
-    height: 1rem;
-    width: 1rem;
+    height: var(--arrow-size);
+    width: var(--arrow-size);
     background-color: yellow;
     position: absolute;
-    top: 50%; /* center vertically */
-    left: -0.5rem; /* half width outside */
+    top: 50%;
+    left: calc(-0.5 * var(--arrow-size)); /* half outside */
     transform: translateY(-50%);
 }
