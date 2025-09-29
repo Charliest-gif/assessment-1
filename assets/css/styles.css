@@ -16,7 +16,6 @@ h1 {
 .box {
     height: calc(100% - var(--arrow-size));
     width: calc(100% - var(--arrow-size));
-    border: 2px solid black;
 }
 
 .arrow-down {
