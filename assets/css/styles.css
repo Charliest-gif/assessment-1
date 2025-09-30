@@ -54,13 +54,46 @@ h2 {
 /* =========================================================
    Navbar
    ========================================================= */
-.navbar {
-    background-color: var(--main-color);
+.navbar-brand {
+    font-family: "Climate Crisis", sans-serif;
+}
+
+.navbar-toggler {
     border: 0;
+    color: var(--main-color);
+}
+
+.navbar-toggler:hover {
+    color: var(--background-sat); /* change color on hover */
+}
+
+.navbar {
+    background-color: var(--dark-text); /* your desired color */
+    border: 0; /* optional: remove default border/shadow */
+    /* --bs-navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
+    --bs-navbar-padding-y: #{$navbar-padding-y}; */
+    --bs-navbar-color: var(--background-sat);
+    --bs-navbar-hover-color: var(--main-color);
+    /* --bs-navbar-disabled-color: #{$navbar-light-disabled-color}; */
+    --bs-navbar-active-color: var(--main-color);
+    /* --bs-navbar-brand-padding-y: #{$navbar-brand-padding-y};
+    --bs-navbar-brand-margin-end: #{$navbar-brand-margin-end};
+    --bs-navbar-brand-font-size: #{$navbar-brand-font-size}; */
+    --bs-navbar-brand-color: var(--main-color);
+    --bs-navbar-brand-hover-color: var(--background-sat);
+    /* --bs-navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x}; */
+    /* --bs-navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
+    --bs-navbar-toggler-padding-x: #{$navbar-toggler-padding-x}; */
+    /* --bs-navbar-toggler-font-size: #{$navbar-toggler-font-size}; */
+    /* --bs-navbar-toggler-icon-bg: red; */
+    /* --bs-navbar-toggler-border-color: blue; */
+    /* --bs-navbar-toggler-border-radius: 0; */
+    /* --bs-navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
+    --bs-navbar-toggler-transition: #{$navbar-toggler-transition}; */
 }
 
 /* =========================================================
-   Layout: Boxes
+   Layout: 54321
    ========================================================= */
 .big-box {
     position: relative;
@@ -79,6 +112,9 @@ h2 {
 /* =========================================================
    Accordion (Bootstrap overrides)
    ========================================================= */
+.accordion h1 {
+    font-family: "DM Sans", sans-serif;
+}
 .accordion {
     overflow: hidden;
     --bs-accordion-bg: var(--background-light);
@@ -97,6 +133,10 @@ h2 {
     --bs-accordion-btn-focus-box-shadow: 0;
     --bs-accordion-active-bg: var(--main-color);
     --bs-accordion-color: var(--dark-text);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--dark-text); /* prevents Bootstrap blue */
 }
 
 /* =========================================================
