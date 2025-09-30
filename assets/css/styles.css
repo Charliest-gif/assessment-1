@@ -1,6 +1,13 @@
 :root {
     --arrow-size: 2rem;
+    --corner-radius: 30px;
 }
+
+/* global styles */
+.round-corner {
+    border-radius: var(--corner-radius);
+}
+
 h1 {
     font-size: 5rem;
 }
