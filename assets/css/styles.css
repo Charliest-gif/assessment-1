@@ -1,15 +1,25 @@
-/* imoprt fonts */
+/* =========================================================
+   Fonts
+   ========================================================= */
 @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
+/* =========================================================
+   Root variables
+   ========================================================= */
 :root {
     --arrow-size: 2rem;
     --corner-radius: 30px;
     --dark-text: #271e1e;
+    --light-text: #271e1e;
+    --background-sat: #fffef6;
+    --background-light: #fffefc;
     --off-white: #fffef6;
     --main-color: #feef00;
 }
 
-/* Global styles */
+/* =========================================================
+   Base styles
+   ========================================================= */
 body {
     font-family: "DM Sans", sans-serif;
     color: var(--dark-text);
@@ -18,24 +28,40 @@ body {
     margin: 0;
 }
 
-.round-corner {
-    border-radius: var(--corner-radius);
-}
-
 h1,
 h2,
 h3 {
     font-family: "Climate Crisis", sans-serif;
 }
 
+.round-corner {
+    border-radius: var(--corner-radius);
+}
+
+/* =========================================================
+   Typography
+   ========================================================= */
 h1 {
     font-size: 5rem;
     font-weight: 400; /* lighter weight */
     text-shadow: 0 0 12px var(--main-color), 0 0 24px var(--main-color);
 }
+
 h2 {
     text-align: center;
 }
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+.navbar {
+    background-color: var(--main-color);
+    border: 0;
+}
+
+/* =========================================================
+   Layout: Boxes
+   ========================================================= */
 .big-box {
     position: relative;
     height: 200px;
@@ -44,15 +70,38 @@ h2 {
     align-items: center; /* center vertically */
     padding: 0;
 }
-.accordion {
-    --bs-accordion-border-radius: var(--corner-radius);
-    --bs-accordion-inner-border-radius: var(--corner-radius);
-}
+
 .box {
     height: calc(100% - var(--arrow-size));
     width: calc(100% - var(--arrow-size));
 }
 
+/* =========================================================
+   Accordion (Bootstrap overrides)
+   ========================================================= */
+.accordion {
+    overflow: hidden;
+    --bs-accordion-bg: var(--background-light);
+    /* --bs-accordion-transition: #{$accordion-transition}; */
+    --bs-accordion-border-color: var(--light-text);
+    --bs-accordion-border-width: 1px;
+    --bs-accordion-border-radius: var(--corner-radius);
+    --bs-accordion-inner-border-radius: calc(var(--corner-radius)-1px);
+    --bs-accordion-btn-color: var(--dark-text);
+    --bs-accordion-btn-bg: var(--background-light);
+    /* --bs-accordion-btn-icon: #{escape-svg($accordion-button-icon)};
+    --bs-accordion-btn-icon-width: #{$accordion-icon-width};
+    --bs-accordion-btn-icon-transform: #{$accordion-icon-transform};
+    --bs-accordion-btn-icon-transition: #{$accordion-icon-transition};
+    --bs-accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)}; */
+    --bs-accordion-btn-focus-box-shadow: 0;
+    --bs-accordion-active-bg: var(--main-color);
+    --bs-accordion-color: var(--dark-text);
+}
+
+/* =========================================================
+   Arrows
+   ========================================================= */
 .arrow-down {
     height: var(--arrow-size);
     width: var(--arrow-size);
