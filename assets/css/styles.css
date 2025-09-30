@@ -1,8 +1,14 @@
 :root {
     --arrow-size: 2rem;
     --corner-radius: 30px;
+    --dark-text: #271e1e;
+    --off-white: #fffef6;
 }
 
+* {
+    color: var(--dark-text);
+    background-color: var(--off-white);
+}
 /* global styles */
 .round-corner {
     border-radius: var(--corner-radius);
@@ -10,6 +16,9 @@
 
 h1 {
     font-size: 5rem;
+}
+h2 {
+    text-align: center;
 }
 .big-box {
     position: relative;
@@ -19,7 +28,10 @@ h1 {
     align-items: center; /* center vertically */
     padding: 0;
 }
-
+.accordion {
+    --bs-accordion-border-radius: var(--corner-radius);
+    --bs-accordion-inner-border-radius: var(--corner-radius);
+}
 .box {
     height: calc(100% - var(--arrow-size));
     width: calc(100% - var(--arrow-size));
@@ -35,6 +47,7 @@ h1 {
     right: 0;
     margin: 0 auto; /* center horizontally */
     font-size: 1.4rem;
+    z-index: 90;
 }
 
 .arrow-right {
@@ -46,6 +59,7 @@ h1 {
     transform: translateY(-50%);
     text-align: center;
     font-size: 1.4rem;
+    z-index: 90;
 }
 
 .arrow-fade-start {
