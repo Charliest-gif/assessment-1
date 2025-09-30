@@ -1,21 +1,37 @@
+/* imoprt fonts */
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
 :root {
     --arrow-size: 2rem;
     --corner-radius: 30px;
     --dark-text: #271e1e;
     --off-white: #fffef6;
+    --main-color: #feef00;
 }
 
-* {
+/* Global styles */
+body {
+    font-family: "DM Sans", sans-serif;
     color: var(--dark-text);
     background-color: var(--off-white);
+    line-height: 1.5;
+    margin: 0;
 }
-/* global styles */
+
 .round-corner {
     border-radius: var(--corner-radius);
 }
 
+h1,
+h2,
+h3 {
+    font-family: "Climate Crisis", sans-serif;
+}
+
 h1 {
     font-size: 5rem;
+    font-weight: 400; /* lighter weight */
+    text-shadow: 0 0 12px var(--main-color), 0 0 24px var(--main-color);
 }
 h2 {
     text-align: center;
