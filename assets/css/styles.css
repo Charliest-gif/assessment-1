@@ -41,8 +41,11 @@ h3 {
 /* =========================================================
    Typography
    ========================================================= */
+h1.display-1 {
+    max-width: 100%; /* prevents overflow */
+    word-wrap: break-word; /* wrap long words if needed */
+}
 h1 {
-    font-size: 5rem;
     font-weight: 400; /* lighter weight */
     text-shadow: 0 0 12px var(--main-color), 0 0 24px var(--main-color);
 }
@@ -91,6 +94,7 @@ h2 {
     /* --bs-navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
     --bs-navbar-toggler-transition: #{$navbar-toggler-transition}; */
 }
+
 /* =========================================================
    crisis link bar
    ========================================================= */
@@ -119,13 +123,14 @@ h2 {
     font-family: "DM Sans", sans-serif;
 }
 .accordion {
+    position: relative;
     overflow: hidden;
     --bs-accordion-bg: var(--background-light);
     /* --bs-accordion-transition: #{$accordion-transition}; */
     --bs-accordion-border-color: var(--light-text);
     --bs-accordion-border-width: 1px;
     --bs-accordion-border-radius: var(--corner-radius);
-    --bs-accordion-inner-border-radius: calc(var(--corner-radius)-1px);
+    /* --bs-accordion-inner-border-radius: calc(var(--corner-radius)-1px); */
     --bs-accordion-btn-color: var(--dark-text);
     --bs-accordion-btn-bg: var(--background-light);
     /* --bs-accordion-btn-icon: #{escape-svg($accordion-button-icon)};
