@@ -234,6 +234,9 @@ header {
     --bs-accordion-color: var(--dark-text);
 }
 
+.accordion-button {
+    height: 60px;
+}
 .accordion-button:not(.collapsed) {
     color: var(--dark-text); /* prevents Bootstrap blue */
 }
