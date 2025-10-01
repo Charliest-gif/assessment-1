@@ -10,7 +10,7 @@
     --arrow-size: 2rem;
     --corner-radius: 30px;
     --dark-text: #271e1e;
-    --light-text: #271e1e;
+    --light-text: #3f3737;
     --background-sat: #fffef6;
     --background-light: #fffefc;
     --off-white: #fffef6;
@@ -52,6 +52,26 @@ h1 {
 
 h2 {
     text-align: center;
+}
+
+/* =========================================================
+   buttons
+   ========================================================= */
+.btn-outline-secondary {
+    --bs-btn-color: var(--dark-text);
+    --bs-btn-border-color: var(--dark-text);
+    --bs-btn-hover-color: var(--background-sat);
+    --bs-btn-hover-bg: var(--light-text);
+    --bs-btn-hover-border-color: var(--light-text);
+    --bs-btn-focus-shadow-rgb: var(--main-color);
+    --bs-btn-active-color: var(--background-sat);
+    --bs-btn-active-bg: var(--dark-text);
+    --bs-btn-active-border-color: var(--dark-text);
+    /* --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); */
+    --bs-btn-disabled-color: var(--dark-text);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--dark-text);
+    --bs-gradient: none;
 }
 
 /* =========================================================
