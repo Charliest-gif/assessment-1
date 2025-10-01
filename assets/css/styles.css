@@ -198,6 +198,7 @@ h2 {
     margin: 0 auto; /* center horizontally */
     font-size: 1.4rem;
     z-index: 90;
+    color: var(--dark-text);
 }
 
 .arrow-right {
@@ -210,24 +211,51 @@ h2 {
     text-align: center;
     font-size: 1.4rem;
     z-index: 90;
+    color: var(--dark-text);
 }
 
 .arrow-fade-start {
     height: var(--arrow-size);
     width: var(--arrow-size);
-    background-color: green;
     position: absolute;
     top: 50%;
     right: calc(-0.5 * var(--arrow-size)); /* half outside */
     transform: translateY(-50%);
+    text-align: center;
+    font-size: 1.4rem;
+    z-index: 90;
+
+    /* mask */
+    /* Apply a mask */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        var(--dark-text),
+        transparent
+    );
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to right, var(--dark-text), transparent);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
 }
 
 .arrow-fade-end {
     height: var(--arrow-size);
     width: var(--arrow-size);
-    background-color: yellow;
+
     position: absolute;
     top: 50%;
     left: calc(-0.5 * var(--arrow-size)); /* half outside */
     transform: translateY(-50%);
+
+    text-align: center;
+    font-size: 1.4rem;
+    z-index: 90;
+
+    -webkit-mask-image: linear-gradient(to left, var(--dark-text), transparent);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to left, var(--dark-text), transparent);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
 }
