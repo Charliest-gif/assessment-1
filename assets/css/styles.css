@@ -92,6 +92,7 @@ h2 {
 }
 
 .navbar {
+    width: 100vw;
     background-color: var(--dark-text); /* your desired color */
     border: 0; /* optional: remove default border/shadow */
     /* --bs-navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
@@ -120,6 +121,7 @@ h2 {
    crisis link bar
    ========================================================= */
 #crisis-bar {
+    width: 100vw;
     color: var(--dark-text);
     background-color: var(--main-color-80);
     font-size: 1rem;
@@ -128,6 +130,55 @@ h2 {
 }
 #crisis-bar a {
     color: var(--light-text);
+}
+/* =========================================================
+   hero
+   ========================================================= */
+header {
+    background-image: url(../images/spanner-background.png);
+    background-size: cover; /* fill the header */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+}
+
+.fade-box-out {
+    background-color: var(--background-sat);
+    min-height: 50px;
+    width: 100vw;
+
+    /* WebKit mask */
+    -webkit-mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    );
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+
+    /* Standard mask */
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+.fade-box-in {
+    background-color: var(--background-sat);
+    min-height: 50px;
+    width: 100vw;
+
+    /* WebKit mask */
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    );
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+
+    /* Standard mask */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
 }
 /* =========================================================
    Layout: 54321
