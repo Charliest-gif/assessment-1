@@ -139,7 +139,7 @@ header {
     background-size: cover; /* fill the header */
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 600px;
+    min-height: 650px;
 }
 
 .fade-box-out {
@@ -197,6 +197,15 @@ header {
     width: calc(100% - var(--arrow-size));
 }
 
+#countdown .card {
+    background-color: var(--background-light);
+    overflow: hidden;
+    border: var(--light-text) 1px solid;
+}
+
+#countdown .card:hover {
+    box-shadow: 0 0 12px var(--main-color);
+}
 /* =========================================================
    Accordion (Bootstrap overrides)
    ========================================================= */
@@ -204,6 +213,7 @@ header {
     font-family: "DM Sans", sans-serif;
 }
 .accordion {
+    border-radius: 0 0 30px 30px;
     position: relative;
     overflow: hidden;
     --bs-accordion-bg: var(--background-light);
@@ -229,7 +239,7 @@ header {
 }
 
 .accordion-button:hover {
-    text-shadow: 0 0 12px var(--main-color), 0 0 12px var(--main-color);
+    text-shadow: 0 0 12px var(--main-color);
 }
 
 .accordion-header {
