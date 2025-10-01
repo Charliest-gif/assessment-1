@@ -10,7 +10,7 @@
     --arrow-size: 2rem;
     --corner-radius: 30px;
     --dark-text: #271e1e;
-    --light-text: #3f3737;
+    --light-text: #695a5a;
     --background-sat: #fffef6;
     --background-light: #fffefc;
     --off-white: #fffef6;
@@ -30,9 +30,14 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
     font-family: "Climate Crisis", sans-serif;
+}
+
+h3 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
 }
 
 .round-corner {
@@ -184,27 +189,43 @@ header {
    Layout: 54321
    ========================================================= */
 .big-box {
+    min-height: 220px;
     position: relative;
-    height: 200px;
-    display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center; /* center vertically */
     padding: 0;
+    margin-bottom: var(--arrow-size); /* vertical spacing between rows */
 }
 
+/* Card width minus arrow space */
 .box {
-    height: calc(100% - var(--arrow-size));
+    height: 100%;
     width: calc(100% - var(--arrow-size));
+    margin-left: calc(var(--arrow-size) / 2);
+    display: flex;
+}
+
+.box p {
+    align-self: baseline;
 }
 
 #countdown .card {
     background-color: var(--background-light);
     overflow: hidden;
     border: var(--light-text) 1px solid;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--light-text);
+    text-align: center;
+}
+
+#countdown .card#instructions {
+    color: var(--dark-text);
+    border: var(--dark-text) 1px solid;
+    box-shadow: none;
 }
 
 #countdown .card:hover {
     box-shadow: 0 0 12px var(--main-color);
+    color: var(--dark-text);
 }
 /* =========================================================
    Accordion (Bootstrap overrides)
