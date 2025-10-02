@@ -140,7 +140,7 @@ a:hover {
     /* --bs-navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
     --bs-navbar-padding-y: #{$navbar-padding-y}; */
     --bs-navbar-color: var(--background-sat);
-    --bs-navbar-hover-color: var(--main-color);
+    --bs-navbar-hover-color: var(--main-color-80);
     /* --bs-navbar-disabled-color: #{$navbar-light-disabled-color}; */
     --bs-navbar-active-color: var(--main-color);
     /* --bs-navbar-brand-padding-y: #{$navbar-brand-padding-y};
@@ -257,7 +257,7 @@ a:hover {
 }
 
 #countdown .card:hover {
-    box-shadow: 0 0 12px var(--main-color);
+    box-shadow: 0 0 0 0.25rem var(--main-color);
     color: var(--dark-text);
 }
 
@@ -308,7 +308,6 @@ a:hover {
    ========================================================= */
 footer {
     display: block;
-    min-height: 200px;
     background-color: var(--main-color-80);
     box-sizing: border-box; /* include padding in height */
     width: 100%;
