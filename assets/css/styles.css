@@ -61,6 +61,10 @@ h3 {
     color: var(--light-text);
     font-size: 1rem;
 }
+
+hr {
+    color: var(--dark-text);
+}
 /* =========================================================
    Typography
    ========================================================= */
@@ -303,8 +307,11 @@ a:hover {
    Footer
    ========================================================= */
 footer {
+    display: block;
     min-height: 200px;
     background-color: var(--main-color-80);
+    box-sizing: border-box; /* include padding in height */
+    width: 100%;
 }
 /* =========================================================
    Arrows
