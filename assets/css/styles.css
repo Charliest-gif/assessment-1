@@ -65,6 +65,9 @@ h3 {
 hr {
     color: var(--dark-text);
 }
+br {
+    line-height: 2;
+}
 /* =========================================================
    Typography
    ========================================================= */
@@ -303,6 +306,29 @@ a:hover {
 .accordion-header {
     min-height: 60px;
 }
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 2rem; /* make icon bigger */
+    color: var(--light-text); /* choose color */
+}
+
+.carousel-control-prev i:hover,
+.carousel-control-next i:hover {
+    color: var(--dark-text); /* choose color */
+}
+
+.carousel.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem; /* left & right padding to keep text away from arrows */
+    background-color: var(--background-light);
+}
+
+#carouselExampleRide {
+    background-color: var(--background-light) !important;
+}
 /* =========================================================
    Footer
    ========================================================= */
@@ -318,6 +344,7 @@ footer h2 {
     font-family: "DM Sans", sans-serif;
     text-align: inherit;
 }
+
 /* =========================================================
    Arrows
    ========================================================= */
