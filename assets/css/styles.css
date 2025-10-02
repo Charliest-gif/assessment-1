@@ -333,6 +333,7 @@ a:hover {
     align-items: center;
     padding: 2rem 4rem; /* left & right padding to keep text away from arrows */
     background-color: var(--background-light);
+    min-height: 200px;
 }
 
 /* =========================================================
