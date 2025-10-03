@@ -31,6 +31,11 @@ body {
     font-size: 1.2rem;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 h1,
 h2 {
     font-family: "Climate Crisis", sans-serif;
@@ -138,7 +143,7 @@ a:hover {
 }
 
 .navbar {
-    width: 100vw;
+    width: 100%;
     background-color: var(--dark-text); /* your desired color */
     border: 0; /* optional: remove default border/shadow */
     /* --bs-navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
@@ -167,7 +172,7 @@ a:hover {
    crisis link bar
    ========================================================= */
 #crisis-bar {
-    width: 100vw;
+    width: 100%;
     color: var(--dark-text);
     background-color: var(--main-color-80);
     font-size: 1rem;
@@ -191,7 +196,7 @@ a:hover {
 .fade-box-out {
     background-color: var(--background-sat);
     min-height: 50px;
-    width: 100vw;
+    width: 100%;
 
     /* WebKit mask */
     -webkit-mask-image: linear-gradient(
@@ -335,6 +340,28 @@ a:hover {
     min-height: 200px;
 }
 
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+    .carousel.slide {
+        padding: 2rem 3rem; /* reduce side padding */
+    }
+
+    .carousel.slide p {
+        font-size: 1.1rem; /* slightly smaller text */
+    }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 576px) {
+    .carousel.slide {
+        padding: 1rem; /* minimal padding */
+    }
+
+    .carousel.slide p {
+        font-size: 1rem; /* comfortable mobile text */
+        line-height: 1.4; /* improve readability */
+    }
+}
 /* =========================================================
    Footer
    ========================================================= */
